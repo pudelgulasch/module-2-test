@@ -1,0 +1,99 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 800px;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
+ol:nth-child(3) {
+  list-style: none;
+  color: blue;
+}
+.images {
+  width: 100%;
+}
+.background {
+  width: 200px;
+  height: 200px;
+  background-image: url(images/tree.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.background,
+img[alt="Image 2"],
+img[alt="Image 3"] {
+  display: inline-block;
+  width: 30%;
+}
+img[alt="Image 2"] {
+  padding: 3px;
+  border: 1px blue solid;
+}
+span:nth-child(1n + 1) {
+  background-color: blue;
+}
+@media screen and (max-width: 1440px) {
+  .mediaquery {
+    background-color: purple;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mediaquery {
+    background-color: red;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mediaquery {
+    background-color: yellow;
+    width: 7rem;
+    height: 7rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .mediaquery {
+    background-color: blue;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.relative {
+  position: relative;
+  left: 50%;
+}
+.absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.item:nth-child(1n + 9) {
+  margin: 0;
+  flex-grow: 1;
+  background-color: red;
+}
+.wrapper {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px;
+  border: 2px orange solid;
+  grid-gap: 5px;
+}
+.wrapper div {
+  border: 2px solid red;
+}
+.cell .two {
+  grid-area: 2/2/4/2;
+}
